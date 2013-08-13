@@ -1,17 +1,31 @@
+import java.util.Scanner;
 
 public class Eggs {
 
 	public static void main(String[] args) {
-		// -------INSTRUCTIONS-------
-		// 1. Complete exercise 8 on page 114 of the Farrell book (chapter 2)
-		// 2. Then delete these comments
-		// 3. Finally, commit and push the project containing this file to GitHub
+		//Declare and initialize named constant
+		final float PRICE_PER_DOZEN = 3.25f;
+		final float PRICE_PER_SINGLE = 0.45f;
+		int eggs, dozens, singles;
+		float dozensCost, singlesCost, totalCost;
+		Scanner kbrd = new Scanner(System.in);
 		
-		// -------RUBRIC-------
-		// Functionality						/9
-		// Appropriate data types chosen		/5
-		// Coding conventions & comments		/6
-
+		//User input
+		System.out.println("How many eggs do you want? >>");
+		eggs = kbrd.nextInt();
+		
+		//Calculations
+		dozens = eggs / 12;
+		singles = eggs % 12;
+		dozensCost = dozens * PRICE_PER_DOZEN;
+		singlesCost = singles * PRICE_PER_SINGLE;
+		totalCost = dozensCost + singlesCost;
+		
+		//User output
+		System.out.println("You ordered" + eggs + " eggs in total.");
+		System.out.println("That's" + dozens + " dozen at $3.25, or $" + dozensCost);
+		System.out.println("That's" + singles + " singles at 45c, or $" + singlesCost);
+		System.out.println("Your total cost is $" + eggs + totalCost);
 	}
 
 }
