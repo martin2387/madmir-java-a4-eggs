@@ -25,7 +25,7 @@ public class Eggs {
 		System.out.println("You ordered" + eggs + " eggs in total.");
 		System.out.println("That's" + dozens + " dozen at $3.25, or $" + dozensCost);
 		System.out.println("That's" + singles + " singles at 45c, or $" + singlesCost);
-		System.out.println("Your total cost is $" + eggs + totalCost);
+		System.out.println("Your total cost is $" + totalCost);
 	}
 
 }
